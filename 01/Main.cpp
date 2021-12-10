@@ -11,23 +11,24 @@ using namespace samples;
 int main()
 {
 	// 1. Namespace Example
-	hello::SayHelloExample();
-	hi::SayHelloExample();
+	// hello::SayHelloExample();
+	// hi::SayHelloExample();
 
 	// 2. Print Everything
-	PrintEverythingExample();
+	// PrintEverythingExample();
 	
 	// 3. Manipulators
-	PrintMenuExample();
+	// PrintMenuExample();
 
 	// 4. Summing Integers
-	AddIntegersExample();
+	// AddIntegersExample();
+	// MyCode();
 
 	// 5. Discarding & Interactive Input
-	ReverseInputStringExample();
+	MyReverseInputString();
 
 	// 6. Reference
-	SwapExample();
+	// SwapExample();
 
 	return 0;
 }
