@@ -25,10 +25,11 @@ int main()
 	// MyCode();
 
 	// 5. Discarding & Interactive Input
-	MyReverseInputString();
+	// MyReverseInputString();
 
 	// 6. Reference
-	// SwapExample();
+	SwapExample();
+    SwapExample2();
 
 	return 0;
 }
