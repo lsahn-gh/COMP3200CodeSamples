@@ -4,6 +4,11 @@ Vector2::Vector2()
 	: mX(0)
 	, mY(0)
 {
+	// 대입
+	// mX = 0;
+	// mY = 0;
+
+	// 대입과 초기화 방식의 차이는? 알아보기
 }
 
 Vector2::Vector2(int x, int y)

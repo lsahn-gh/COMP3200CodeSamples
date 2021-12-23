@@ -22,4 +22,19 @@ namespace samples
 		}
 		cout << "mirrored string" << line << endl;
 	}
+
+	void MirrorStringExample2()
+	{
+		string myLine = "hersheys";
+
+		cout << "myLine = " << myLine << endl;
+
+		myLine += ' ';
+		for (int i = (int)myLine.size() - 2; i >= 0; i--)
+		{
+			myLine += myLine[i];
+		}
+
+		cout << "myLine = " << myLine << endl;
+	}
 }

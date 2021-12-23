@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 
+// 4개의 string 타입을 가지는 멤버 정의
+// FirstName, LastName, StudentID, Score
 struct Record
 {
 	std::string FirstName;

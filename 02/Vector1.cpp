@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// 대입 vs 초기화 차이점 알아보기
 Vector1::Vector1()
 	: mX(0)
 	, mY(0)
