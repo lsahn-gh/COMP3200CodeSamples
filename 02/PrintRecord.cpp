@@ -24,7 +24,7 @@ namespace samples
 
 		// input stringStream에서 데이터를 읽어온다.
 		inputStream >> firstName >> lastName >> studentID >> score;
-		// output stringStream으로 데이터를 저장한다.
+		// output stringStream으로 데이터를 저장(출력?)한다.
 		// 이때 데이터는 stream buffer에 저장되어 있다.
 		outputStream << firstName << " " << lastName << " " << studentID << " " << score;
 
