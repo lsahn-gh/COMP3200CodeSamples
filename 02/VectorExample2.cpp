@@ -12,6 +12,8 @@ namespace samples
 		cout << "|       Vector Example 2       |" << endl;
 		cout << "+------------------------------+" << endl;
 
+		// stack에 생성되는 개체 또한 생성자/소멸자가 호출된다.
+		// 단순히 해당 영역의 메모리만 생성되는 것은 아님 (혼동주의)
 		Vector2 v1;
 		Vector2 v2(13, 4);
 

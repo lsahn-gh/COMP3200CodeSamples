@@ -5,6 +5,8 @@
 #include "VectorExample1.h"
 #include "VectorExample2.h"
 
+#include "lstringExample.h"
+
 using namespace samples;
 
 int main()
@@ -20,10 +22,13 @@ int main()
 	// lsr::LsrManageRecordsExample();
 
 	// 4. Vector(Header/Cpp)
-	VectorExample1();
+	// VectorExample1();
 
 	// 5. Vector with Member Functions
 	// VectorExample2();
+
+    // 6. lstring Class
+    lstringExample();
 
 	return 0;
 }
