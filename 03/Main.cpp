@@ -8,16 +8,16 @@ using namespace samples;
 int main()
 {
 	// 1. Copy Constructor with char Array
-	CopyConstructorExample();
+	// CopyConstructorExample();
 
 	// 2. Multiplying with a Vector or Scalar in Vector Class
 	FunctionOverloadExample();
 
 	// 3. Multiplying with a Vector or Scalar in Vector Class
-	OperatorOverloadExample();
+	// OperatorOverloadExample();
 
 	// 4. Animal, Cat, Dog Classes
-	InheritanceExample();
+	// InheritanceExample();
 
 	return 0;
 }
