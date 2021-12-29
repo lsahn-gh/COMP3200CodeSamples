@@ -6,25 +6,32 @@ using namespace std;
 
 namespace ls
 {
-    class lstring
-    {
-    public:
-        // 일반 생성자
-        lstring();
-        lstring(const char* string);
-        lstring(const string& string);
-        // 복사 생성자
-        lstring(const lstring& string);
-        // 소멸자
-        ~lstring();
+	class lstring
+	{
+	public:
+		// Constructor & Overloading
+		lstring();
+		lstring(const size_t capacity);
+		lstring(const char* string);
+		lstring(const string& string);
+		// Copy Constructor
+		lstring(const lstring& string);
+		// Destructor
+		~lstring();
 
-        char* Get() const;
-        int Length() const;
-        int Capacity() const;
+		char* GetString() const;
+		void SetString(const char* string);
 
-    private:
-        char* mChar;
-        int mLength;
-        int mCapacity;
-    };
+		size_t GetLength() const;
+		size_t GetCapacity() const;
+
+		// Operator Overloadings
+		friend ostream& operator<<(ostream& os, const lstring& rhs);
+		lstring operator+(const lstring& rhs) const;
+
+	private:
+		char* mChar;
+		size_t mLength;
+		size_t mCapacity;
+	};
 }
