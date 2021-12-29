@@ -38,6 +38,7 @@ namespace samples
 		return (mX == rhs.mX && mY == rhs.mY);
 	}
 
+    // 'Vector2 * Vector2' 형태
 	Vector2 Vector2::operator*(const Vector2& rhs) const
 	{
 		Vector2 result(mX * rhs.mX, mY * rhs.mY);
@@ -45,6 +46,7 @@ namespace samples
 		return result;
 	}
 
+    // 'Vector2 * integer' 형태이므로 Vector2 클래스의 멤버함수로 정의한다.
 	Vector2 Vector2::operator*(int multiplier) const
 	{
 		Vector2 result(mX * multiplier, mY * multiplier);
@@ -52,6 +54,8 @@ namespace samples
 		return result;
 	}
 
+    // 'integer * Vector2' 형태이므로 전역변수 형태로 정의한다.
+    // Vector2 클래스의 멤버함수는 아니다.
 	Vector2 operator*(int multiplier, const Vector2& v)
 	{
 		Vector2 result(v.mX * multiplier, v.mY * multiplier);
@@ -59,11 +63,16 @@ namespace samples
 		return result;
 	}
 
+    // Vector2 vec2;
+    // 'vec2 *= vec1' 형태
+    // 기존 vec2 개체에 vec1 값을 곱하여 vec2 레퍼런스 반환
 	Vector2& Vector2::operator*=(const Vector2& rhs)
 	{
 		mX *= rhs.mX;
 		mY *= rhs.mY;
 		
+        // 자기 자신을 리턴함
+        // 왜 refer 타입인가?
 		return *this;
 	}
 
