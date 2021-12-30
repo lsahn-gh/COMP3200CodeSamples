@@ -14,10 +14,10 @@ int main()
 	// FunctionOverloadExample();
 
 	// 3. Multiplying with a Vector or Scalar in Vector Class
-	OperatorOverloadExample();
+	// OperatorOverloadExample();
 
 	// 4. Animal, Cat, Dog Classes
-	// InheritanceExample();
+	InheritanceExample();
 
 	return 0;
 }

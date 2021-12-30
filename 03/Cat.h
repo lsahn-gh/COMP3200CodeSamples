@@ -11,5 +11,7 @@ namespace samples
 		Cat(int age);
 
 		std::string Purr() const;
+    private:
+        int mType;
 	};
 }

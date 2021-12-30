@@ -72,6 +72,11 @@ namespace samples
 		mY *= rhs.mY;
 		
         // 자기 자신을 리턴함
+        // 연속 체이닝 가능
+        // - vec1 *= vec2 *= vec3
+        //   vec1 *= vec2
+        //   vec1 *= vec3 순으로 처리
+        //
         // 왜 refer 타입인가?
 		return *this;
 	}
