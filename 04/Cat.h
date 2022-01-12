@@ -9,7 +9,9 @@ namespace samples
 	public:
 		Cat(int age);
 
+#if 0
 		virtual void Move() const;
+#endif
 		virtual void Speak() const;
 	};
 }

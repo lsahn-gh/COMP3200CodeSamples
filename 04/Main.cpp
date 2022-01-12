@@ -10,10 +10,10 @@ int main()
 	PolymorphismExample();
 
 	// 2. Multiple Inheritance... YUCK
-	MultiInheritanceExample();
+	// MultiInheritanceExample();
 
 	// 3. Interface
-	InterfaceExample();
+	// InterfaceExample();
 
 	return 0;
 }

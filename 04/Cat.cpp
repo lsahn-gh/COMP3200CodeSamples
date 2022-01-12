@@ -8,10 +8,12 @@ namespace samples
 	{
 	}
 
+#if 0
 	void Cat::Move() const
 	{
 		std::cout << "A cat is moving" << std::endl;
 	}
+#endif
 
 	void Cat::Speak() const
 	{

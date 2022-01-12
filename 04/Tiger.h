@@ -7,7 +7,7 @@ namespace samples
 	class Tiger : public Animal
 	{
 	public:
-		Tiger::Tiger(int age);
+		Tiger(int age);
 
 		void PretendToBeZebra() const;
 	};
