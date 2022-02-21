@@ -9,9 +9,12 @@ namespace samples
 {
 	void PointerVectorExample()
 	{
+		// '개체 포인터'를 담는 벡터 선언 후 크기를 5로 지정.
+		// 32bits = 4 bytes, 64bits = 8 bytes
 		vector<Score*> scores;
 		scores.reserve(5);
 
+		// 개체를 힙에 생성
 		Score* cppScore = new Score(30, "C++");
 		Score* algoScore = new Score(59, "Algorithm");
 		Score* javaScore = new Score(87, "Java");
@@ -32,6 +35,7 @@ namespace samples
 			Score* score = *iter;
 			if (score->GetClassName() == "Java")
 			{
+				// 지워도 괜찮다. 각 아이템 별로 주소를 백업해놓았으니 말이다.
 				iter = scores.erase(iter);
 			}
 			else
@@ -44,10 +48,14 @@ namespace samples
 
 		for (vector<Score*>::iterator iter = scores.begin(); iter != scores.end(); ++iter)
 		{
+			// 값 복사지만 포인터 주소이다.
 			Score* score = *iter;
 
 			if (score->GetScore() == 30)
 			{
+				// 원본에 값 변경이 일어난다.
+				// 이유는? 벡터의 요소들은 개체의 포인터를 가지고 있고 아래 코드는 해당 요소의 포인터를
+				//        역참조하여 원본 개체의 SetScore 함수를 호출하기 때문이다.
 				score->SetScore(100);
 			}
 		}
@@ -55,11 +63,16 @@ namespace samples
 		cout << "After chaning the score of class 1" << endl;
 		PrintVector(scores);
 
-		delete cppScore;
-		delete algoScore;
+		for (vector<Score*>::iterator iter = scores.begin(); iter != scores.end(); ++iter)
+		{
+			delete *iter;
+		}
+
+		// delete cppScore;
+		// delete algoScore;
 		delete javaScore;
-		delete dataCommScore;
-		delete androidScore;
+		// delete dataCommScore;
+		// delete androidScore;
 	}
 
 	void PrintVector(const vector<Score*>& scores)

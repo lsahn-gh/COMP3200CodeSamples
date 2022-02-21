@@ -10,8 +10,11 @@ namespace samples
 	{
 		int sum = 0;
 
+		// '.size()' : 벡터에 저장된 아이템의 갯수만큼 반환
 		for (size_t i = 0; i < scores.size(); i++)
 		{
+			// 'operator[]'가 구현되어 있어 Array 요소 접근하듯이 사용 가능.
+			// 반환 타입은 reference 이므로 대입하였을때 벡터 요소가 변경된다.
 			sum += scores[i];
 		}
 
@@ -38,6 +41,7 @@ namespace samples
 		yourScores.push_back(91);
 		yourScores.push_back(100);
 
+		// 'yourScores'에 있는 모든 아이템을 삭제한다.
 		yourScores.clear();
 
 		cout << "myScores" << endl;
